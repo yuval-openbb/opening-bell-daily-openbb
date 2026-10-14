@@ -25,6 +25,8 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 origins = [
+    "http://localhost:3000",  # self-hosted Workspace Lite
+    "http://127.0.0.1:3000",
     "https://pro.openbb.co",
     "https://pro.openbb.dev",
     "https://excel.openbb.co",
